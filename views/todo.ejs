@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<title>Todo App</title>
+<link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+<div class="todo-container">
+<h2>Tasker : To-Do List App</h2>
+<div class="todo">
+<form action="/" method="POST" class="todo-header">
+    <table>
+        <thead>
+          <tr class="table-active">
+            <th >Name</th>
+            <th >Creator</th>
+            <th >Duration</th>
+            <th ></th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td> <input type="text" name="description"placeholder=" Task Name" required></input></th>
+                <td> <input type="text" name="creator"placeholder=" Who are you ?" required></input></th>
+              <td > <input type="number" name="duration" placeholder=" in minutes" required></th>
+            </tr>
+        </tbody>
+    </table>
+<input type="text" name="content" placeholder=" Give the Task Description">
+<button type="submit"><span class="fas fa-plus"></span></button>
+
+
+
+
+
+</form>
+<ul class="todo-list">
+    <%todoTasks && todoTasks.forEach(details => { %>
+    <li class="todo-list-item">
+
+          <table>
+            <tbody>
+
+                <tr>
+                    <td>Name&emsp;</td>
+                  <td><%= details.description %>&nbsp;</th>
+                </tr>
+                <tr>
+                  <td>&emsp;</td>
+              </tr>
+
+                <tr>
+                    <td>Description&emsp;</td>
+                  <td><%= details.content %>&nbsp;</th>
+                </tr>
+                <tr>
+                  <td>&emsp;</td>
+              </tr>
+                <tr>
+                    <td>Creator&emsp;</td>
+                  <td><%= details.creator%>&nbsp;</th>
+                </tr>
+                <tr>
+                  <td>&emsp;</td>
+              </tr>
+                <tr>
+                    <td>Duration&emsp;</td>
+                  <td><%= details.duration %>&nbsp;</th>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+
+    <a href="/edit/<%= details._id %>" class="edit">
+    <span class="fas fa-edit"></span>
+    </a>
+    <a href="/remove/<%= details._id %>" class="remove">
+    <span class="fas fa-times"></span>
+    </a>
+    </li>
+    <% }) %>
+</ul>
+</div>
+</div>
+</body>
