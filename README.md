@@ -115,8 +115,8 @@ To get a local copy up and running follow these simple example steps.
  * For deleting the created task automatically after the it's time duration is expired i have implemented crone job for this purpose
 So what is crone job !!
 Crone job used for scheduling tasks to be executed sometime in the future. This is normally used to schedule a job that is executed periodically – for example, to send out a notice every morning.
-and in our scenario we want to delete the tasks whos time are expire 
-So i write code inside crone job that runs every second and get all the tasks and then it checks all tasks expiry date one by one and if there is any task whose expiry date is less then the current time so it means the task duration has been passed/ended if so then delete that task
+and in our scenario we want to delete the tasks whose time are expired
+So i wrote the code inside crone job that runs every second and get all the tasks and then it checks all tasks expiry date one by one and if there is any task whose expiry date is less then the current time so it means the task duration has been passed/ended if so then delete that task.
 
 <!-- CONTRIBUTING -->
 ## Contributing
