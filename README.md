@@ -62,7 +62,9 @@ Tasker is simple and awesome app to organize your tasks with very easy to use in
 * CRUD: CRUD stands for Create, Read, Update and Delete. Which are the basic operations that a simple web app would be designed to achieve.
 
 
-* Rest: If you didn’t hear about REST before, you can read more about it here.
+* REST: A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.
+
+
 
 Pre-requirements :
 VS Code installed or other editor you may like.
